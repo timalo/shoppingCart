@@ -1,0 +1,47 @@
+.landingLink {
+  color: black;
+  text-decoration: none;
+  background-color: #dbdbdb;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.7rem 3.5rem;
+  text-shadow: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+
+.landingLink:hover {
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  scale: 1.05;
+}
+
+.content {
+  height: 75%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  padding: 5% 1rem 1rem 1rem;
+  color: white;
+  text-shadow: 4px 4px 6px #000000;
+  animation: appearInVision 0.8s ease-in-out;
+}
+
+@keyframes appearInVision {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  80% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
