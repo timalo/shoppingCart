@@ -20,9 +20,11 @@ main {
   justify-content: center;
   align-self: center;
   background-image: url("images/backgroundRainImage.jpeg");
-  background-size: cover; /* Ensure the image covers the entire area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden; /* This hides the scrollbar on initial animation */
 }
 
 .header {

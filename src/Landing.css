@@ -30,6 +30,10 @@
   animation: appearInVision 0.8s ease-in-out;
 }
 
+h2 {
+  color: white;
+}
+
 @keyframes appearInVision {
   0% {
     opacity: 0;

@@ -1,11 +1,11 @@
 .productContent {
   height: 100%;
-  width: 100%;
+  width: 69.67%; /* Don't ask. I wanted this to line up with the header bar when on fullscreen. */
   display: flex;
   flex-direction: column;
   background-color: #efefef;
   justify-self: center;
-  padding: 2rem;
+  padding: 2.2rem;
 }
 
 h2 {
@@ -15,18 +15,19 @@ h2 {
   margin-bottom: 0;
 }
 
-h3 {
+.centerTitle {
   color: #444444;
-  font-size: 1.5rem;
   text-align: center;
 }
 
 .productArea {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   border: 2px solid red;
-  height: 70%;
+  height: 100%;
   padding: 1rem;
+}
+
+main {
+  overflow: auto;
 }
