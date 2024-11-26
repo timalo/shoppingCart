@@ -1,12 +1,23 @@
 import "./Layout.css";
 import "./Products.css";
-import items from "./data/initialItems.js";
 import ProductCard from "./ProductCard.jsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Products = () => {
-  const [products, setProducts] = useState(items);
-
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products?limit=10")
+      .then((response) => response.json())
+      .then((data) => {
+        const newProducts = data.map((item) => ({
+          id: item.id,
+          name: item.title,
+          price: item.price,
+          image: item.image,
+        }));
+        setProducts(newProducts);
+      });
+  }, []);
   return (
     <div className="productContent">
       <h2 className="centerTitle">Product page</h2>

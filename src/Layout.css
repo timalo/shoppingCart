@@ -5,6 +5,7 @@ html {
   width: 100%;
   margin: 0;
   padding: 0;
+  min-width: 760px;
 }
 
 .container {
@@ -22,7 +23,6 @@ main {
   background-image: url("images/backgroundRainImage.jpeg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
   overflow: hidden; /* This hides the scrollbar on initial animation */
 }
