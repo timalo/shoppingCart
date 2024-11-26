@@ -25,7 +25,9 @@ const Layout = () => {
           <ul className="nav-links-end">
             <div className="verticalSeparator"></div>
             <li>
-              <Link to="/cart">Cart</Link>
+              <Link to="/cart">
+                Cart <span className="totalPrice">0,00€</span>
+              </Link>
             </li>
           </ul>
         </nav>

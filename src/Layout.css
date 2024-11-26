@@ -93,3 +93,8 @@ main {
   align-items: center;
   justify-content: flex-end;
 }
+
+.totalPrice {
+  font-weight: 800;
+  font-size: 1.05rem;
+}
