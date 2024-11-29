@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import "./Layout.css";
 import { Outlet } from "react-router-dom";
+import { useState } from "react";
 
 const Layout = () => {
+  const [cart, setCart] = useState([]);
+
+  const totalPrice = cart
+    .reduce((total, item) => total + item.price, 0)
+    .toFixed(2);
+
   return (
     <div className="container">
       <header className="header">
@@ -26,14 +33,14 @@ const Layout = () => {
             <div className="verticalSeparator"></div>
             <li>
               <Link to="/cart">
-                Cart <span className="totalPrice">0,00€</span>
+                Cart <span className="totalPrice">{totalPrice} €</span>
               </Link>
             </li>
           </ul>
         </nav>
       </header>
       <main>
-        <Outlet />
+        <Outlet context={[cart, setCart]} />
       </main>
     </div>
   );

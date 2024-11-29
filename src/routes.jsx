@@ -3,7 +3,7 @@ import Layout from "./Layout";
 import Products from "./Products";
 import Cart from "./Cart";
 import Landing from "./Landing";
-
+import About from "./About";
 const routes = [
   {
     path: "/",
@@ -13,6 +13,7 @@ const routes = [
       { path: "/", element: <Landing /> },
       { path: "products", element: <Products /> },
       { path: "cart", element: <Cart /> },
+      { path: "about", element: <About /> },
     ],
   },
 ];
