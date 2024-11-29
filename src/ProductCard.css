@@ -27,7 +27,7 @@
 }
 
 .productPrice {
-  background-color: #44aa44;
+  background-color: #44dd44;
   width: 40%;
   height: 75%;
   font-weight: 800;
@@ -55,8 +55,9 @@
   width: 50%;
   height: 80%;
   padding: 0;
-  background-color: #898989;
+  background-color: #676767;
   color: white;
+  font-weight: 600;
 }
 
 .buyProductBtn:hover {

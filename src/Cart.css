@@ -1,0 +1,18 @@
+.cartArea {
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cartEmpty {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.cartEmptyProductLink {
+  font-size: 1.5rem;
+  margin-top: 0;
+}

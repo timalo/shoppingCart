@@ -10,7 +10,7 @@ const Products = () => {
   //const [cart, setCart] = useOutletContext();
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products?limit=10")
+    fetch("https://fakestoreapi.com/products?limit=20")
       .then((response) => response.json())
       .then((data) => {
         const newProducts = data.map((item) => ({

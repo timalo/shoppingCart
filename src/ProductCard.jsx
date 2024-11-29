@@ -1,4 +1,5 @@
 import "./ProductCard.css";
+import { addToCart } from "./CartHandler.js";
 
 const ProductCard = (props) => {
   return (
@@ -11,7 +12,9 @@ const ProductCard = (props) => {
       <h3 className="productName">{props.item.name}</h3>
       <div className="bottomSection">
         <p className="productPrice">{props.item.price} €</p>
-        <button className="buyProductBtn">Buy item</button>
+        <button onClick={() => addToCart(props.item)} className="buyProductBtn">
+          Add to cart
+        </button>
       </div>
     </div>
   );
