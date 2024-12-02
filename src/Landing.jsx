@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
 import "./Layout.css";
 import "./Landing.css";
+import { useEffect } from "react";
 
 const Landing = () => {
+  useEffect(() => {
+    const mainComp = document.querySelector("main");
+    mainComp.style.overflow = "hidden";
+    const timer = setTimeout(() => {
+      mainComp.style.overflow = "auto";
+    }, 800);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="content">
       <h1>Welcome to the Shopping page!</h1>
