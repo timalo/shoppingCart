@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Layout.css";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
+import bgImage from "/images/backgroundRainImage.jpeg";
 
 const Layout = () => {
   const [cart, setCart] = useState([]);
@@ -39,7 +40,11 @@ const Layout = () => {
           </ul>
         </nav>
       </header>
-      <main>
+      <main
+        style={{
+          backgroundImage: `url(${bgImage})`,
+        }}
+      >
         <Outlet context={[cart, setCart]} />
       </main>
     </div>
