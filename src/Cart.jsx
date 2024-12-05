@@ -63,7 +63,7 @@ const Cart = () => {
                 <p className="cartProductPrice">{product.price} €</p>
                 <p className="productMult">x {product.quantity}</p>
                 <p className="cartProductTotal">
-                  = {product.price * product.quantity} €
+                  = {(product.price * product.quantity).toFixed(2)} €
                 </p>
                 <button
                   onClick={() => removeFromCart(cart, setCart, product)}
@@ -82,7 +82,7 @@ const Cart = () => {
                 <p className="totalProductMult">
                   {product.quantity} x {product.name} ={"  "}
                   <span className="lineTotal">
-                    {product.price * product.quantity} €
+                    {(product.price * product.quantity).toFixed(2)} €
                   </span>
                 </p>
               </div>

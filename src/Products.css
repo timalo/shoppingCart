@@ -63,3 +63,49 @@
 main {
   overflow: auto;
 }
+
+.notifications {
+  position: fixed;
+  top: 4rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Add gap between notifications */
+  z-index: 1000;
+}
+
+.notification {
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s;
+  max-width: 300px;
+}
+
+.notification.exit {
+  animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

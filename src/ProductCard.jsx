@@ -1,5 +1,4 @@
 import "./ProductCard.css";
-import { addToCart } from "./CartHandler.js";
 import { useOutletContext } from "react-router-dom";
 
 const ProductCard = (props) => {
@@ -15,7 +14,7 @@ const ProductCard = (props) => {
       <div className="bottomSection">
         <p className="productPrice">{props.item.price} €</p>
         <button
-          onClick={() => addToCart(cart, setCart, props.item)}
+          onClick={() => props.handleAddToCart(cart, setCart, props.item)}
           className="buyProductBtn"
         >
           Add to cart
