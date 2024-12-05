@@ -13,7 +13,7 @@ const Purchased = () => {
         }}
       >
         <h1 className="centerTitle">
-          Thank you for your purchase!
+          Thanks for your money :) hehe
           <br />
           <br />
           <Link to="/">Go back to home page</Link>

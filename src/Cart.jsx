@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Cart.css";
 import { useOutletContext } from "react-router-dom";
 import { changeQuantity, removeFromCart, checkout } from "./CartHandler.js";
@@ -16,7 +17,7 @@ const Cart = () => {
           <p className="cartEmptyProductLink">
             {" "}
             You can add items to your cart from the{" "}
-            <a href="/products">Products</a> page
+            <Link to="/products">Products</Link> page
           </p>
         </div>
       </div>
@@ -99,12 +100,13 @@ const Cart = () => {
                 .toFixed(2)}{" "}
               €
             </p>
-            <button
+            <Link
+              to="/purchased"
               className="cartCheckoutBtn"
               onClick={() => checkout(setCart)}
             >
               Checkout
-            </button>
+            </Link>
           </div>
         </div>
       </div>

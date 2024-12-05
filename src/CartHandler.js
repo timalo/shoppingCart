@@ -31,7 +31,6 @@ export const changeQuantity = (cart, setCart, item, number) => {
 };
 
 export const checkout = (setCart) => {
-  //Empties the cart and moves the  user to purchased page
-  window.location.href = "/purchased";
+  //Empties the cart
   setCart([]);
 };
