@@ -10,7 +10,6 @@ const routes = [
     path: "/",
     element: <Layout />,
     children: [
-      //Could also add a landing page here if we want to ?  or just shove landing page elements into layout component
       { path: "/", element: <Landing /> },
       { path: "products", element: <Products /> },
       { path: "cart", element: <Cart /> },
