@@ -44,17 +44,28 @@ describe("Allows the user to navigate to the products page from main content but
     const user = userEvent.setup();
 
     //Expect the products page to be rendered when the user clicks on the products link
-    const productBtn = screen.queryByText("link", {
-      className: "landingLink",
+    const productLink = screen.getByText("Start shopping", {
+      selector: "a.landingLink",
     });
-    await user.click(productBtn);
+    await user.click(productLink);
 
     // Check that the Products page is rendered
     expect(screen.getByText(/product page/i)).toBeInTheDocument();
 
-    const productCardTitle = await screen.findByText("Mens Cotton Jacket", {
+    const productCardTitle1 = await screen.findByText("Mens Cotton Jacket", {
       selector: "h3.productName",
     });
-    expect(productCardTitle).toBeInTheDocument();
+    const productCardTitle2 = await screen.findByText("Mens Casual Slim Fit", {
+      selector: "h3.productName",
+    });
+    const productCardTitle3 = await screen.findByText(
+      "Opna Women's Short Sleeve Moisture",
+      {
+        selector: "h3.productName",
+      }
+    );
+    expect(productCardTitle1).toBeInTheDocument();
+    expect(productCardTitle2).toBeInTheDocument();
+    expect(productCardTitle3).toBeInTheDocument();
   });
 });
