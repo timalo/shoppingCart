@@ -9,4 +9,3 @@ The user is able to add items into their shopping cart and then later examine th
 ## Deployment
 
 The site can be viewed at https://tmshop.netlify.app/.
-This is a work in progress so site functionality is not yet working as intended.
